@@ -1,0 +1,16 @@
+import java.util.LinkedList;
+
+public class LinkedListSequencedCollection {
+    public static void main(String[] args) {
+        LinkedList<Integer> numbers = new LinkedList<>();
+
+        numbers.addFirst(10);
+        numbers.addLast(30);
+        numbers.add(1, 20);  
+
+        System.out.println("Sequenced LinkedList:");
+        for (int num : numbers) {
+            System.out.println(num);
+        }
+    }
+}

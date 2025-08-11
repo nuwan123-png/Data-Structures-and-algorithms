@@ -1,0 +1,16 @@
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetSequencedSet {
+    public static void main(String[] args) {
+        LinkedHashSet<String> items = new LinkedHashSet<>();
+
+        items.add("One");
+        items.add("Two");
+        items.add("Three");
+
+        System.out.println("LinkedHashSet (insertion order):");
+        for (String item : items) {
+            System.out.println(item);
+        }
+    }
+}

@@ -1,0 +1,41 @@
+import java.util.ArrayDeque;
+import java.util.Deque;
+
+public class LIFOQueueUsingDeque<T> {
+    private Deque<T> deque = new ArrayDeque<>();
+
+    public void push(T item) {
+        deque.push(item);
+    }
+
+    public T pop() {
+        if (deque.isEmpty()) {
+            System.out.println("Queue is empty!");
+            return null;
+        }
+        return deque.pop(); // LIFO order
+    }
+
+    public T peek() {
+        if (deque.isEmpty()) {
+            System.out.println("Queue is empty!");
+            return null;
+        }
+        return deque.peek();
+    }
+
+    public boolean isEmpty() {
+        return deque.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        LIFOQueueUsingDeque<Integer> lifo = new LIFOQueueUsingDeque<>();
+        lifo.push(1);
+        lifo.push(2);
+        lifo.push(3);
+
+        System.out.println("Top: " + lifo.peek());
+        System.out.println("Pop: " + lifo.pop());
+        System.out.println("Pop: " + lifo.pop());
+    }
+}
